@@ -39,13 +39,32 @@ _conda_
 
 **Key commands you ran:**
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+locale  # check for UTF-8
+sudo apt install software-properties-common
+sudo add-apt-repository universe
+sudo apt update && sudo apt install curl -y
+export ROS_APT_SOURCE_VERSION=$(curl -s https://api.github.com/repos/ros-infrastructure/ros-apt-source/releases/latest | grep -F "tag_name" | awk -F\" '{print $4}')
+curl -L -o /tmp/ros2-apt-source.deb "https://github.com/ros-infrastructure/ros-apt-source/releases/download/${ROS_APT_SOURCE_VERSION}/ros2-apt-source_${ROS_APT_SOURCE_VERSION}.$(. /etc/os-release && echo ${UBUNTU_CODENAME:-${VERSION_CODENAME}})_all.deb"
+sudo dpkg -i /tmp/ros2-apt-source.deb
+sudo apt update
+sudo apt upgrade
+sudo apt install ros-humble-desktop
+source /opt/ros/humble/setup.bash
+ros2 run demo_nodes_cpp talker
+source /opt/ros/humble/setup.bash #another terminal
+ros2 run demo_nodes_cpp talker #another terminal
+cd ~/Downloads
+chmod +x Anaconda3-2025.12-1-Linux-aarch64.sh
+./Anaconda3-2025.12-1-Linux-aarch64.sh
+git clone https://github.com/qmohsu/PolyU-AAE5303-env-smork-test
+conda create -n test1
+conda activate test1
+cd ~/PolyU-AAE5303-env-smork-test
+source /opt/ros/humble/setup.bash
 ```
 
 **Any deviations from the default instructions:**  
-_Using conda as the environment_
+_Using conda as the environment; pip install -r requirements.txt not work, install the dependencies one by one manually_
 
 ### 2.2 Test Results
 
