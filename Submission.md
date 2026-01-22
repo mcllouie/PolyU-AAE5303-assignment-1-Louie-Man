@@ -291,8 +291,11 @@ Summary: 1 package finished [x.xx s]
 
 **Your actual output:**
 ```
-[Paste your build summary here]
+Summary: 1 package finished [0.21 s]
 ```
+
+**Screenshot:**  
+![Talker and Listener Running](https://github.com/mcllouie/PolyU-AAE5303-assignment-1-Louie-Man/blob/main/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96%202026-01-22%2020.43.59.png)
 
 ### 3.2 Run talker and listener
 
@@ -305,32 +308,36 @@ source install/setup.bash
 
 **Then run talker:**
 ```bash
-ros2 run env_check_pkg talker.py
+ros2 run env_check_pkg talker
 ```
 
 **Output (3–4 lines):**
 ```
-[Paste 3-4 lines of talker output here]
+[INFO] [1769086155.213263327] [env_check_pkg_talker]: Publishing: 'AAE5303 hello #29'
+[INFO] [1769086155.713226843] [env_check_pkg_talker]: Publishing: 'AAE5303 hello #30'
+[INFO] [1769086156.213227942] [env_check_pkg_talker]: Publishing: 'AAE5303 hello #31'
+[INFO] [1769086156.714606914] [env_check_pkg_talker]: Publishing: 'AAE5303 hello #32'
 ```
 
 **Run listener:**
 ```bash
-ros2 run env_check_pkg listener.py
+ros2 run env_check_pkg listener
 ```
 
 **Output (3–4 lines):**
 ```
-[Paste 3-4 lines of listener output here]
+[INFO] [1769086155.213409285] [env_check_pkg_listener]: I heard: 'AAE5303 hello #29'
+[INFO] [1769086155.713494218] [env_check_pkg_listener]: I heard: 'AAE5303 hello #30'
+[INFO] [1769086156.213376484] [env_check_pkg_listener]: I heard: 'AAE5303 hello #31'
+[INFO] [1769086156.714908372] [env_check_pkg_listener]: I heard: 'AAE5303 hello #32'
 ```
 
-**Alternative (using launch file):**
+~~**Alternative (using launch file):**~~
 ```bash
 ros2 launch env_check_pkg env_check.launch.py
 ```
 
 **Screenshot:**  
-_[Include one screenshot showing talker + listener running]_
-
 ![Talker and Listener Running](https://github.com/mcllouie/PolyU-AAE5303-assignment-1-Louie-Man/blob/main/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96%202026-01-22%2020.49.13.png)
 
 ---
@@ -468,12 +475,12 @@ _XX January 2026_
 Before submitting, ensure you have:
 
 - [X] Filled in all system information
-- [ ] Included actual terminal outputs (not just screenshots)
-- [ ] Provided at least 2 screenshots (Python tests + ROS talker/listener)
+- [X] Included actual terminal outputs (not just screenshots)
+- [X] Provided at least 2 screenshots (Python tests + ROS talker/listener)
 - [ ] Documented 2–3 real problems with solutions
 - [ ] Completed the AI usage section with exact prompts
 - [ ] Written a thoughtful reflection (3–5 sentences)
-- [ ] Signed the declaration
+- [X] Signed the declaration
 
 ---
 
