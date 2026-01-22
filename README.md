@@ -51,11 +51,12 @@ _Using conda as the environment_
 
 Run these commands and paste the actual terminal output (not just screenshots):
 
+**Input1:**
 ```bash
 python scripts/test_python_env.py
 ```
 
-**Output:**
+**Output1:**
 ```
 ========================================
 AAE5303 One-command Environment Check
@@ -151,12 +152,15 @@ Running: /home/mcllouie/anaconda3/envs/test1/bin/python -u /home/mcllouie/PolyU-
 OVERALL RESULT: PASS
 ========================================
 ```
+**Screenshot1:** 
 
+
+**Input2:**
 ```bash
 python scripts/test_python_env.py
 ```
 
-**Output:**
+**Output2:**
 ```
 ========================================
 AAE5303 Environment Check (Python + ROS)
@@ -224,12 +228,15 @@ Step 10: Basic CLI availability
 
 All checks passed. You are ready for AAE5303 🚀
 ```
+**Screenshot2:** 
 
+
+**Input3:**
 ```bash
 python scripts/test_open3d_pointcloud.py
 ```
 
-**Output:**
+**Output3:**
 ```
 ℹ️ Loading /home/mcllouie/PolyU-AAE5303-env-smork-test/data/sample_pointcloud.pcd ...
 ✅ Loaded 8 points.
@@ -242,10 +249,8 @@ python scripts/test_open3d_pointcloud.py
 🎉 Open3D point cloud pipeline looks good.
 ```
 
-**Screenshot:**  
-_[Include one screenshot showing both tests passing]_
+**Screenshot3:**  
 
-![Python Tests Passing](path/to/your/screenshot.png)
 
 ---
 
