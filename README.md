@@ -8,19 +8,19 @@
 ## 1. System Information
 
 **Laptop model:**  
-_[Your laptop model, e.g., Dell XPS 15, MacBook Pro M1, etc.]_
+_Apple MacBook Pro 2021 (16 inch)_
 
 **CPU / RAM:**  
-_[e.g., Intel Core i7-11800H, 16GB RAM]_
+_M1Pro Core,16GB Ram (12GB for VM)_
 
 **Host OS:**  
-_[Windows 11 / macOS / Ubuntu 22.04]_
+_macOS 26.2（25C56）, VM: Ubuntu 22.04_
 
 **Linux/ROS environment type:**  
 _[Choose one:]_
 - [ ] Dual-boot Ubuntu
 - [ ] WSL2 Ubuntu
-- [ ] Ubuntu in VM (UTM/VirtualBox/VMware/Parallels)
+- [X] Ubuntu in VM (UTM/VirtualBox/VMware/Parallels)
 - [ ] Docker container
 - [ ] Lab PC
 - [ ] Remote Linux server
@@ -34,7 +34,7 @@ _[Choose one:]_
 Describe briefly how you created/activated your Python environment:
 
 **Tool used:**  
-_[venv / conda / system Python]_
+_conda_
 
 **Key commands you ran:**
 ```bash
