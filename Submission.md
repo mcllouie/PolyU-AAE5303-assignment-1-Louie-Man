@@ -53,7 +53,7 @@ Run these commands and paste the actual terminal output (not just screenshots):
 
 **Input1:**
 ```bash
-python scripts/test_python_env.py
+python scripts/run_smoke_tests.py
 ```
 
 **Output1:**
@@ -153,7 +153,7 @@ OVERALL RESULT: PASS
 ========================================
 ```
 **Screenshot1:** 
-
+![run_smoke_tests](https://github.com/mcllouie/PolyU-AAE5303-assignment-1-Louie-Man/blob/main/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96%202026-01-22%2019.57.54.png)
 
 **Input2:**
 ```bash
@@ -229,7 +229,7 @@ Step 10: Basic CLI availability
 All checks passed. You are ready for AAE5303 🚀
 ```
 **Screenshot2:** 
-
+![test_python_env](https://github.com/mcllouie/PolyU-AAE5303-assignment-1-Louie-Man/blob/main/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96%202026-01-22%2019.59.01.png)
 
 **Input3:**
 ```bash
@@ -250,7 +250,7 @@ python scripts/test_open3d_pointcloud.py
 ```
 
 **Screenshot3:**  
-
+![test_open3d_pointcloud](https://github.com/mcllouie/PolyU-AAE5303-assignment-1-Louie-Man/blob/main/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96%202026-01-22%2019.59.59.png)
 
 ---
 
