@@ -32,7 +32,7 @@ _[Choose one:]_
 ### 2.1 Steps Taken
 
 Describe briefly how you created/activated your Python environment:
-
+I have tried following the steps as stipulated in the assignment, however, since the MacBook is running in ARM environment and in a VM, open3D is an issue that could only available up to 0.18.0.  As discussed by classmates in the official WeChat Group, the environment is changed to “conda”.
 
 **Tool used:**  
 _conda_
@@ -45,7 +45,7 @@ pip install -r requirements.txt
 ```
 
 **Any deviations from the default instructions:**  
-_[Describe any changes you made, or write "None"]_
+_Using conda as the environment_
 
 ### 2.2 Test Results
 
