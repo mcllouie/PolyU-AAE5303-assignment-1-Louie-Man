@@ -14,7 +14,7 @@ _Apple MacBook Pro 2021 (16 inch)_
 _M1Pro Core,16GB Ram (12GB for VM)_
 
 **Host OS:**  
-_macOS 26.2（25C56）, VM: Ubuntu 22.04_
+_macOS 26.2（25C56）, VM: Ubuntu 22.04.5 LTS_
 
 **Linux/ROS environment type:**  
 _[Choose one:]_
