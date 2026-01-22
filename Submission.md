@@ -52,7 +52,7 @@ sudo apt install ros-humble-desktop
 source /opt/ros/humble/setup.bash
 ros2 run demo_nodes_cpp talker
 source /opt/ros/humble/setup.bash #another terminal
-ros2 run demo_nodes_cpp talker #another terminal
+ros2 run demo_nodes_cpp listener #another terminal
 cd ~/Downloads
 chmod +x Anaconda3-2025.12-1-Linux-aarch64.sh
 ./Anaconda3-2025.12-1-Linux-aarch64.sh
