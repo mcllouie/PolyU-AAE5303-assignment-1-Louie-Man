@@ -346,27 +346,145 @@ ros2 launch env_check_pkg env_check.launch.py
 
 > **Note:** Write 2–3 issues, even if small. This section is crucial — it demonstrates understanding and problem-solving.
 
-### Issue 1: [Write the exact error message or problem]
+### Issue 1: venv Environment Does Not Support Open3D 0.19.0 in ARM System
 
 **Cause / diagnosis:**  
-_[Explain what you think caused it]_
+_Open3D is still developing 0.19.0 for ARM linux system_
 
-**Fix:**  
-_[The exact command/config change you used to solve it]_
-
+**Input:**
 ```bash
-[Your fix command/code here]
+pip install open3d==0.19.0
 ```
+**Output:**
+```bash
+ERROR: Could not find a version that satisfies the requirement open3d==0.19.0 (from versions: 0.16.0, 0.17.0, 0.18.0)
+ERROR: No matching distribution found for open3d==0.19.0
+```
+**Fix:**  
+_Use conda environment_
+
+**Conda Environment Setup:**
+```bash
+cd ~/Downloads
+chmod +x Anaconda3-2025.12-1-Linux-aarch64.sh
+./Anaconda3-2025.12-1-Linux-aarch64.sh
+git clone https://github.com/qmohsu/PolyU-AAE5303-env-smork-test
+conda create -n test1
+conda activate test1
+```
+*I intended to "Test" the environment so to name "test1", yet it worked with only one try. (Since the codes works, just don't touch it XD)
 
 **Reference:**  
-_[Official ROS docs? StackOverflow? AI assistant? Something else?]_
+_Class Official WeChat, Anaconda, Google Ai Reply_
 
 ---
 
-### Issue 2: [Another real error or roadblock]
+### Issue 2: The command: "python -m pip install -r requirements.txt" don't work
 
 **Cause / diagnosis:**  
-_[Explain what you think caused it]_
+__
+
+```bash
+========================================
+AAE5303 One-command Environment Check
+Tip: read README.md for interpretation and fixes.
+========================================
+
+
+========== Step 1: Python + ROS environment checks ==========
+Running: /home/mcllouie/anaconda3/envs/test1/bin/python -u /home/mcllouie/PolyU-AAE5303-env-smork-test/scripts/test_python_env.py
+========================================
+AAE5303 Environment Check (Python + ROS)
+Goal: help you verify your environment and understand what each check means.
+========================================
+
+Step 1: Environment snapshot
+  Why: We capture platform/Python/ROS variables to diagnose common setup mistakes (especially mixed ROS env).
+Step 2: Python version
+  Why: The course assumes Python 3.10+; older versions often break package wheels.
+Step 3: Python imports (required/optional)
+  Why: Imports verify packages are installed and compatible with your Python version.
+Step 4: NumPy sanity checks
+  Why: We run a small linear algebra operation so success means more than just `import numpy`.
+Step 5: SciPy sanity checks
+  Why: We run a small FFT to confirm SciPy is functional (not just installed).
+Step 6: Matplotlib backend check
+  Why: We generate a tiny plot image (headless) to confirm plotting works on your system.
+Step 7: OpenCV PNG decoding (subprocess)
+  Why: PNG decoding uses native code; we isolate it so corruption/codec issues cannot crash the whole report.
+Step 8: Open3D basic geometry + I/O (subprocess)
+  Why: Open3D is a native extension; ABI mismatches can segfault. Subprocess isolation turns crashes into readable failures.
+Step 9: ROS toolchain checks
+  Why: The course requires ROS tooling. This check passes if ROS 2 OR ROS 1 is available (either one is acceptable).
+Step 10: Basic CLI availability
+  Why: We confirm core commands exist on PATH so students can run the same commands as in the labs.
+
+=== Summary ===
+✅ Environment: {
+  "platform": "Linux-5.15.0-164-generic-aarch64-with-glibc2.35",
+  "python": "3.10.19",
+  "executable": "/home/mcllouie/anaconda3/envs/test1/bin/python",
+  "cwd": "/home/mcllouie/PolyU-AAE5303-env-smork-test",
+  "ros": {
+    "ROS_VERSION": "2",
+    "ROS_DISTRO": "humble",
+    "ROS_ROOT": null,
+    "ROS_PACKAGE_PATH": null,
+    "AMENT_PREFIX_PATH": "/opt/ros/humble",
+    "CMAKE_PREFIX_PATH": null
+  }
+}
+✅ Python version OK: 3.10.19
+❌ Missing required module 'numpy'.
+   ↳ Fix: python -m pip install -r requirements.txt
+❌ Missing required module 'scipy'.
+   ↳ Fix: python -m pip install -r requirements.txt
+❌ Missing required module 'matplotlib'.
+   ↳ Fix: python -m pip install -r requirements.txt
+❌ Missing required module 'cv2'.
+   ↳ Fix: python -m pip install -r requirements.txt
+✅ Module 'rclpy' found (vunknown).
+❌ Failed to import numpy: No module named 'numpy'
+   ↳ Fix: pip install -r requirements.txt
+❌ Failed to import scipy/fft: No module named 'numpy'
+   ↳ Fix: pip install -r requirements.txt
+❌ matplotlib import failed: No module named 'matplotlib'
+   ↳ Fix: pip install -r requirements.txt
+❌ OpenCV subprocess failed: Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+ModuleNotFoundError: No module named 'cv2'
+   ↳ Fix: Reinstall OpenCV: `pip install -r requirements.txt`
+❌ Open3D subprocess failed: Traceback (most recent call last):
+  File "<string>", line 5, in <module>
+ModuleNotFoundError: No module named 'numpy'
+   ↳ Fix: Reinstall Open3D: `pip install -r requirements.txt`
+✅ ROS 2 CLI OK: /opt/ros/humble/bin/ros2
+✅ ROS 1 tools not found (acceptable if ROS 2 is installed).
+❌ colcon not found on PATH (required for ROS 2 builds).
+   ↳ Fix: On Ubuntu/WSL2:
+  - sudo apt update
+  - sudo apt install python3-colcon-common-extensions
+If apt says 'Unable to locate package python3-colcon-common-extensions', enable the Ubuntu 'universe' repository and retry:
+  - sudo apt install -y software-properties-common
+  - sudo add-apt-repository universe
+  - sudo apt update
+  - sudo apt install python3-colcon-common-extensions
+If you are inside a minimal container with trimmed apt sources, you can also use pip:
+  - python -m pip install -U colcon-common-extensions
+✅ Binary 'python3' found at /home/mcllouie/anaconda3/envs/test1/bin/python3
+
+Environment check failed (10 issue(s)).
+❌ Python + ROS environment checks: FAIL (exit code 1) (0.4s)
+
+========== Step 2: Open3D point cloud pipeline ==========
+Running: /home/mcllouie/anaconda3/envs/test1/bin/python -u /home/mcllouie/PolyU-AAE5303-env-smork-test/scripts/test_open3d_pointcloud.py
+❌ Required module missing: numpy. Run `pip install -r requirements.txt`.
+❌ Open3D point cloud pipeline: FAIL (exit code 1) (0.0s)
+
+========================================
+OVERALL RESULT: FAIL
+========================================
+```
 
 **Fix:**  
 _[The exact command/config change you used to solve it]_
