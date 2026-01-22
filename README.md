@@ -20,7 +20,7 @@ _macOS 26.2（25C56）, VM: Ubuntu 22.04_
 _[Choose one:]_
 - [ ] Dual-boot Ubuntu
 - [ ] WSL2 Ubuntu
-- [X] Ubuntu in VM (UTM/VirtualBox/VMware/Parallels)
+- [X] Ubuntu in VM (UTM ~~/VirtualBox/VMware/Parallels~~)
 - [ ] Docker container
 - [ ] Lab PC
 - [ ] Remote Linux server
@@ -32,6 +32,7 @@ _[Choose one:]_
 ### 2.1 Steps Taken
 
 Describe briefly how you created/activated your Python environment:
+
 
 **Tool used:**  
 _conda_
@@ -255,13 +256,13 @@ _[Write your 3-5 sentence reflection here]_
 ✅ **I confirm that I performed this setup myself and all screenshots/logs reflect my own environment.**
 
 **Name:**  
-_[Your name]_
+_Man Chi Lok Louie_
 
 **Student ID:**  
-_[Your student ID]_
+_25001004G_
 
 **Date:**  
-_[Date of submission]_
+_XX January 2026_
 
 ---
 
@@ -269,7 +270,7 @@ _[Date of submission]_
 
 Before submitting, ensure you have:
 
-- [ ] Filled in all system information
+- [X] Filled in all system information
 - [ ] Included actual terminal outputs (not just screenshots)
 - [ ] Provided at least 2 screenshots (Python tests + ROS talker/listener)
 - [ ] Documented 2–3 real problems with solutions
