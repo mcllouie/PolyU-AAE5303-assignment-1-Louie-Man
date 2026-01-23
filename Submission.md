@@ -32,6 +32,7 @@ _[Choose one:]_
 ### 2.1 Steps Taken
 
 Describe briefly how you created/activated your Python environment:
+
 I have tried following the steps as stipulated in the assignment, however, since the MacBook is running in ARM environment and in a VM, open3D is an issue that could only available up to 0.18.0.  As discussed by classmates in the official WeChat Group, the environment is changed to “conda”.
 
 **Tool used:**  
@@ -487,14 +488,19 @@ OVERALL RESULT: FAIL
 ```
 
 **Fix:**  
-_[The exact command/config change you used to solve it]_
+_Install all the dependencies one by one_
 
 ```bash
-[Your fix command/code here]
+pip install numpy
+pip install scipy
+pip install matplotlib
+pip install opencv-python
+sudo apt update
+sudo apt install python3-colcon-common-extensions
 ```
 
 **Reference:**  
-_[Official ROS docs? StackOverflow? AI assistant? Something else?]_
+_Hint from the test result_
 
 ---
 
