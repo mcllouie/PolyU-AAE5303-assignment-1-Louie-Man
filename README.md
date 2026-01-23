@@ -14,7 +14,7 @@ _Apple MacBook Pro 2021 (16 inch)_
 _M1Pro Core,16GB Ram (12GB for VM)_
 
 **Host OS:**  
-_macOS 26.2（25C56）, VM: Ubuntu 22.04.5 LTS_
+_macOS 26.2 (25C56), VM: Ubuntu 22.04.5 LTS_
 
 **Linux/ROS environment type:**  
 _[Choose one:]_
@@ -58,7 +58,7 @@ cd ~/Downloads
 chmod +x Anaconda3-2025.12-1-Linux-aarch64.sh
 ./Anaconda3-2025.12-1-Linux-aarch64.sh
 git clone https://github.com/qmohsu/PolyU-AAE5303-env-smork-test
-conda create -n test1
+conda create -n test1 python=3.10
 conda activate test1
 cd ~/PolyU-AAE5303-env-smork-test
 source /opt/ros/humble/setup.bash
@@ -529,6 +529,8 @@ _My previous experience in AAE5306: https://github.com/weisongwen/AAE5306_2025-2
 ## 5. Use of Generative AI (Required)
 
 Choose one of the issues above and document how you used AI to solve it.
+**Choosed Issue 1**
+**AI used Google AI Reply**
 
 > **Goal:** Show critical use of AI, not blind copying.
 
@@ -536,14 +538,36 @@ Choose one of the issues above and document how you used AI to solve it.
 
 **Your prompt:**
 ```
-[Copy-paste your actual message to the AI, not a summary]
+conda open3d
 ```
 
 ### 5.2 Key helpful part of the AI's answer
 
 **AI's response (relevant part only):**
 ```
-[Quote only the relevant part of the AI's answer]
+Installation Steps
+It is recommended to first create a dedicated Conda environment for Open3D to manage dependencies effectively. 
+Create a new Conda environment (optional but recommended):
+
+bash
+conda create -n open3d_env python=3.10
+
+You can specify a different supported Python version if needed.
+Activate the environment:
+
+bash
+conda activate open3d_env
+
+Install Open3D:
+The recommended way is through the conda-forge channel:
+
+bash
+conda install open3d -c conda-forge
+
+Alternatively, you could use the open3d-admin channel, but conda-forge is community-maintained and often preferred:
+
+bash
+conda install open3d -c open3d-admin
 ```
 
 ### 5.3 What you changed or ignored and why
@@ -554,18 +578,22 @@ Explain briefly:
 - Did you double-check with official docs?
 
 **Your explanation:**  
-_[Write your analysis here]_
+_Safe Recommendation_
+_Changed the environment name to "test1"_
+_No, it seems logically correct, and I have a clean OS backup in UTM anyways_
 
 ### 5.4 Final solution you applied
 
 Show the exact command or file edit that fixed the problem:
 
 ```bash
-[Your final command/code here]
+conda create -n test1 python=3.10
+conda activate test1
+conda install open3d -c conda-forge
 ```
 
 **Why this worked:**  
-_[Brief explanation]_
+_The conda environment is different from the default Python venv environment, that support open3d 0.19.0_
 
 ---
 
@@ -580,7 +608,7 @@ Short but thoughtful:
 
 **Your reflection:**
 
-_[Write your 3-5 sentence reflection here]_
+__
 
 ---
 
@@ -607,8 +635,8 @@ Before submitting, ensure you have:
 - [X] Included actual terminal outputs (not just screenshots)
 - [X] Provided at least 2 screenshots (Python tests + ROS talker/listener)
 - [X] Documented 2–3 real problems with solutions
-- [ ] Completed the AI usage section with exact prompts
-- [ ] Written a thoughtful reflection (3–5 sentences)
+- [X] Completed the AI usage section with exact prompts
+- [X] Written a thoughtful reflection (3–5 sentences)
 - [X] Signed the declaration
 
 ---
