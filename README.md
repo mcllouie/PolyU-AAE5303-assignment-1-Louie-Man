@@ -580,7 +580,7 @@ Explain briefly:
 **Your explanation:**  
 _Safe Recommendation_
 
-_Changed the environment name to "test1"_
+_Changed the environment name to "test1" to fit its "testing" purpose_
 
 _No, it seems logically correct, and I have a clean OS backup in UTM anyways_
 
@@ -610,7 +610,7 @@ Short but thoughtful:
 
 **Your reflection:**
 
-__
+_I have already expected that it will be more troubles running Apple Silicon as experienced in last semester AAE5306, that I have to run codes in VM, solve ARM architecture issue, and some of the software only have windows copy.  However, previous experience working on ARM version Linux, I have been able to tackle the problem with a clear solution in mind, that the missing pieces would be the code.  Google AI is always my partner in solving the code issue, since it had been working with me so long (my personal data and style of asking), it could prompt the required answer with just one or two tries.  To be honest, I still can’t figure out the differences between conda and python virtual environment, but since the codes works, just don’t touch it.  I would rate myself 7 out of 10 for debugging confidence with AI, 2 out of 10 if without AI._
 
 ---
 
