@@ -173,7 +173,7 @@ OVERALL RESULT: PASS
 ========================================
 ```
 **Screenshot1:** 
-![run_smoke_tests](https://github.com/mcllouie/PolyU-AAE5303-assignment-1-Louie-Man/blob/main/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96%202026-01-22%2019.57.54.png)
+![run_smoke_tests](https://github.com/mcllouie/PolyU-AAE5303-assignment-1-Louie-Man/blob/main/Images/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96%202026-01-22%2019.57.54.png)
 
 **Input2:**
 ```bash
@@ -249,7 +249,7 @@ Step 10: Basic CLI availability
 All checks passed. You are ready for AAE5303 🚀
 ```
 **Screenshot2:** 
-![test_python_env](https://github.com/mcllouie/PolyU-AAE5303-assignment-1-Louie-Man/blob/main/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96%202026-01-22%2019.59.01.png)
+![test_python_env](https://github.com/mcllouie/PolyU-AAE5303-assignment-1-Louie-Man/blob/main/Images/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96%202026-01-22%2019.59.01.png)
 
 **Input3:**
 ```bash
@@ -270,7 +270,7 @@ python scripts/test_open3d_pointcloud.py
 ```
 
 **Screenshot3:**  
-![test_open3d_pointcloud](https://github.com/mcllouie/PolyU-AAE5303-assignment-1-Louie-Man/blob/main/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96%202026-01-22%2019.59.59.png)
+![test_open3d_pointcloud](https://github.com/mcllouie/PolyU-AAE5303-assignment-1-Louie-Man/blob/main/Images/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96%202026-01-22%2019.59.59.png)
 
 ---
 
@@ -296,7 +296,7 @@ Summary: 1 package finished [0.21 s]
 ```
 
 **Screenshot:**  
-![Talker and Listener Running](https://github.com/mcllouie/PolyU-AAE5303-assignment-1-Louie-Man/blob/main/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96%202026-01-22%2020.43.59.png)
+![Talker and Listener Running](https://github.com/mcllouie/PolyU-AAE5303-assignment-1-Louie-Man/blob/main/Images/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96%202026-01-22%2020.43.59.png)
 
 ### 3.2 Run talker and listener
 
@@ -339,7 +339,7 @@ ros2 launch env_check_pkg env_check.launch.py
 ```
 
 **Screenshot:**  
-![Talker and Listener Running](https://github.com/mcllouie/PolyU-AAE5303-assignment-1-Louie-Man/blob/main/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96%202026-01-22%2020.49.13.png)
+![Talker and Listener Running](https://github.com/mcllouie/PolyU-AAE5303-assignment-1-Louie-Man/blob/main/Images/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96%202026-01-22%2020.49.13.png)
 
 ---
 
