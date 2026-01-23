@@ -350,7 +350,7 @@ ros2 launch env_check_pkg env_check.launch.py
 ### Issue 1: venv Environment Does Not Support Open3D 0.19.0 in ARM System
 
 **Cause / diagnosis:**  
-_Open3D is still developing 0.19.0 for ARM linux system_
+_Open3D 0.19.0 not available in Python venv for ARM linux system_
 
 **Input:**
 ```bash
@@ -385,7 +385,7 @@ _Class Official WeChat, Anaconda, Google Ai Reply_
 ### Issue 2: The command: "python -m pip install -r requirements.txt" don't work
 
 **Cause / diagnosis:**  
-__
+_Not sure_
 
 ```bash
 ========================================
