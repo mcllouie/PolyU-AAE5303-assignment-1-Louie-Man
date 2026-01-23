@@ -382,10 +382,25 @@ _Class Official WeChat, Anaconda, Google Ai Reply_
 
 ---
 
-### Issue 2: The command: "python -m pip install -r requirements.txt" don't work
+### Issue 2: The command: "python -m pip install -r requirements.txt" don't install dependencies
 
 **Cause / diagnosis:**  
-_Not sure_
+_Not sure, it do return errors, but not installing dependencies_
+
+```bash
+Collecting numpy<3,>=2.0 (from -r requirements.txt (line 1))
+  Using cached numpy-2.2.6-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (63 kB)
+Collecting scipy>=1.13 (from -r requirements.txt (line 2))
+  Using cached scipy-1.15.3-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (61 kB)
+Collecting matplotlib>=3.8 (from -r requirements.txt (line 3))
+  Using cached matplotlib-3.10.8-cp310-cp310-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl.metadata (52 kB)
+Collecting opencv-python>=4.10 (from -r requirements.txt (line 4))
+  Using cached opencv_python-4.13.0.90-cp37-abi3-manylinux_2_28_aarch64.whl.metadata (19 kB)
+ERROR: Ignored the following versions that require a different python version: 1.16.0 Requires-Python >=3.11; 1.16.0rc1 Requires-Python >=3.11; 1.16.0rc2 Requires-Python >=3.11; 1.16.1 Requires-Python >=3.11; 1.16.2 Requires-Python >=3.11; 1.16.3 Requires-Python >=3.11; 1.17.0 Requires-Python >=3.11; 1.17.0rc1 Requires-Python >=3.11; 1.17.0rc2 Requires-Python >=3.11; 1.6.2 Requires-Python >=3.7,<3.10; 1.6.3 Requires-Python >=3.7,<3.10; 1.7.0 Requires-Python >=3.7,<3.10; 1.7.1 Requires-Python >=3.7,<3.10; 2.3.0 Requires-Python >=3.11; 2.3.1 Requires-Python >=3.11; 2.3.2 Requires-Python >=3.11; 2.3.3 Requires-Python >=3.11; 2.3.4 Requires-Python >=3.11; 2.3.5 Requires-Python >=3.11; 2.4.0 Requires-Python >=3.11; 2.4.0rc1 Requires-Python >=3.11; 2.4.1 Requires-Python >=3.11
+ERROR: Could not find a version that satisfies the requirement open3d==0.19.0 (from versions: 0.16.0, 0.17.0, 0.18.0)
+ERROR: No matching distribution found for open3d==0.19.0
+```
+_Then run smork test_
 
 ```bash
 ========================================
