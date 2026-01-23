@@ -372,6 +372,8 @@ chmod +x Anaconda3-2025.12-1-Linux-aarch64.sh
 git clone https://github.com/qmohsu/PolyU-AAE5303-env-smork-test
 conda create -n test1
 conda activate test1
+cd ~/PolyU-AAE5303-env-smork-test
+pip install open3d==0.19.0
 ```
 *I intended to "Test" the environment so to name "test1", yet it worked with only one try. (Since the codes works, just don't touch it XD)
 
@@ -590,7 +592,7 @@ _Man Chi Lok Louie_
 _25001004G_
 
 **Date:**  
-_XX January 2026_
+_23 January 2026_
 
 ---
 
@@ -601,7 +603,7 @@ Before submitting, ensure you have:
 - [X] Filled in all system information
 - [X] Included actual terminal outputs (not just screenshots)
 - [X] Provided at least 2 screenshots (Python tests + ROS talker/listener)
-- [ ] Documented 2–3 real problems with solutions
+- [X] Documented 2–3 real problems with solutions
 - [ ] Completed the AI usage section with exact prompts
 - [ ] Written a thoughtful reflection (3–5 sentences)
 - [X] Signed the declaration
