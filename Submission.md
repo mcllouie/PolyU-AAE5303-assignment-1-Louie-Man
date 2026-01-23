@@ -506,20 +506,23 @@ _Hint from the test result_
 
 ---
 
-### Issue 3 (Optional): [Title]
+### Issue 3: There is no GUI in LTS version of Ubuntu
 
 **Cause / diagnosis:**  
-_[Explain what you think caused it]_
+_ARM Server edition does not have GUI when installed_
 
 **Fix:**  
-_[The exact command/config change you used to solve it]_
+_The same issue was encounter in the last semester in AAE5306_
 
 ```bash
-[Your fix command/code here]
+sudo apt update 
+sudo apt upgrade
+sudo apt install slim
+sudo apt install ubuntu-desktop
 ```
 
 **Reference:**  
-_[Official ROS docs? StackOverflow? AI assistant? Something else?]_
+_My previous experience in AAE5306: https://github.com/weisongwen/AAE5306_2025-26S1/issues/10_
 
 ---
 
